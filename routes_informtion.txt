@@ -1,0 +1,16 @@
+post
+
+/login----->validate the crededitials of student and redirects to get route dashboard
+/login1---->validate the crededitials of admin and redirects to get route admindashboard
+/apply----->
+
+get
+
+/dashboard--->It renders dashboard.ejs and fetch information using sql query
+/admindashhbord-->It renders adminhostel.ejs
+
+/hostel--->
+/check
+/confirm
+/download-pdf
+/logout

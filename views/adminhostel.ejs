@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin dashboard</title>
+</head>
+<body>
+    <%- include('nav1') %>
+    <br>
+    <h2>APPLIED FOR LEAVE</h2>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">BEGIN DATE</th>
+              <th scope="col">END DATE</th>
+              <th scope="col">HOSTEL</th>
+              <th scope="col">CONFIRMATION</th>
+            </tr>
+          </thead>
+          <h3><a href="/approved?hostel=<%=final.hostel%>">Check approved request</a></h3>
+    <%final.results.forEach((item)=>{ %>
+        
+        <tr>
+        <td scope="col">id <%= item.id %></td>
+        <td scope="col">begindate: <%= item.begindate %></td>
+        <td scope="col">End date:<%= item.enddate %></td>
+        <td scope="col"><%= item.hostel %></td>
+        <td scope="col"><a href="/confirm?id1=<%= item.reqid %>&fid=<%= item.id %>">Confirm</a>/<a href="/deleted?id1=<%= item.reqid %>&fid=<%= item.id %>">reject</a></td>
+    </tr>
+        <% }) %>
+    </table>
+    <br>
+
+</body>
+</html>

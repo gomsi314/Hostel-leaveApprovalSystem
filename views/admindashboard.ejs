@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fl{
+            display: flex;
+            align-items: center;
+        }
+        .re{
+            font-size: x-large ;
+            text-decoration: none;
+            margin: 3%;
+        }
+    </style>
+</head>
+<body>
+    <%- include('nav1') %>
+    <div class="fl"><a class="re" href="/hostel?hostel=K">Hostel K</a>
+        <a class="re" href="/hostel?hostel=M">Hostel M</a>
+        <a class="re" href="/hostel?hostel=L">Hostel L</a>
+        <a class="re" href="/hostel?hostel=Q">Hostel Q</a>
+    </div>
+    <%- include('footer') %>
+</body>
+</html>
